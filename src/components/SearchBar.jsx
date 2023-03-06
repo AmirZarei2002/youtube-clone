@@ -27,6 +27,7 @@ export default function SearchBar() {
                 pl: 2,
                 boxShadow: 'none',
                 mr: { sm: 5 },
+                display: 'flex',
             }}
         >
             <input
@@ -36,7 +37,11 @@ export default function SearchBar() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <IconButton type="submit" sx={{ p: '10px', color: 'red' }}>
+            <IconButton
+                type="submit"
+                sx={{ p: '10px', color: 'red' }}
+                aria-label="search"
+            >
                 <SearchIcon />
             </IconButton>
         </Paper>

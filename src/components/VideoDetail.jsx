@@ -22,7 +22,7 @@ const VideoDetail = () => {
         ).then((data) => setVideos(data.items));
     }, [id]);
 
-    if (!videoDetail?.snippet) return  'Loading...';
+    if (!videoDetail?.snippet) return 'Loading...';
 
     const {
         snippet: { title, channelId, channelTitle },
@@ -57,10 +57,7 @@ const VideoDetail = () => {
                             px={2}
                         >
                             <Link to={`/channel/${channelId}`}>
-                                <Typography
-                                    variant={{ sm: 'subtitle1', md: 'h6' }}
-                                    color="#fff"
-                                >
+                                <Typography variant="subtitle1" color="#fff">
                                     {channelTitle}
                                     <CheckCircleIcon
                                         sx={{
